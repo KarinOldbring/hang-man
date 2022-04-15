@@ -11,7 +11,7 @@ def get_valid_word(words):
     return word.upper()
 
 # Input username
-name = input("What's your name?")
+name = input("What's your name?\n")
 print(f"Good luck {name}!")
 
 turns = 6
@@ -27,14 +27,15 @@ def play_game():
     print("Secret word: " + " ".join(secret_word) +"\n")
 
     while not guessed and turns > 0:
-        guess = input("Guess a letter: ").upper()
+        guess = input("Guess a letter: \n").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(f"You already tried {guess}, try again")
-            elif guess not in word:
+            elif guess not in secret_word:
                 print(f"Sorry, {guess} is not in the word")
                 turns -= 1
                 guessed_letters.append(guess)
+                print(f"You have {turns} tries left.")
             else:
                 print(f"Well done, {guess} is in the word!")
             
