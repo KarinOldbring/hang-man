@@ -24,6 +24,24 @@ def play_game():
     turns = 6
     print("Let's start!")
     print(f"Turns left: {turns}")
-    print("Guess the word by choosing a letter: " + " ".join(secret_word) +"\n")
+    print("Secret word: " + " ".join(secret_word) +"\n")
+
+    while not guessed and turns > 0:
+        guess = input("Guess a letter: ").upper()
+        if len(guess) == 1 and guess.isalpha():
+            if guess in guessed_letters:
+                print(f"You already tried {guess}, try again")
+            elif guess not in word:
+                print(f"Sorry, {guess} is not in the word")
+                turns -= 1
+                guessed_letters.append(guess)
+            else:
+                print(f"Well done, {guess} is in the word!")
+            
+        else: 
+            print(f"{guess} is not a valid guess, please choose a letter")
+
+   
+        
 
 play_game()
