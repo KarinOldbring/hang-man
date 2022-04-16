@@ -1,5 +1,8 @@
 import random
 from words import words
+import string
+
+print("Hi! Let's play Hangman!")
 
 # generate valid random word
 
@@ -17,30 +20,54 @@ print(f"Good luck {name}!")
 turns = 6
 
 def play_game():
+    alpha = set(string.ascii_uppercase)
     word = get_valid_word(words)
+    letters_word = set(word)
     secret_word = "_" * len(word)
     guessed = False
-    guessed_letters = []
-    turns = 6
+    guessed_letters = set()
+    guessed_words = set(word)
+    turns = 15
     print("Let's start!")
-    print(f"Turns left: {turns}")
-    print("Secret word: " + " ".join(secret_word) +"\n")
+    print("Turns left: ", turns)
+    print(secret_word)
+    #print("Secret word: " + " ".join(secret_word) +"\n")
 
-    while not guessed and turns > 0:
-        guess = input("Guess a letter: \n").upper()
-        if len(guess) == 1 and guess.isalpha():
-            if guess in guessed_letters:
-                print(f"You already tried {guess}, try again")
-            elif guess not in secret_word:
-                print(f"Sorry, {guess} is not in the word")
-                turns -= 1
-                guessed_letters.append(guess)
-                print(f"You have {turns} tries left.")
+    while len(letters_word) and turns > 0:
+
+        letter_list = [letter if letter in guessed_letters else "_" for letter in word]
+        #print("Guessed letters: ", " ".join(guessed_letters))
+        guess = input(" Pick a letter: \n").upper()
+
+        #valid choice
+        if guess in alpha - guessed_letters:
+            guessed_letters.add(guess)
+            if guess in letters_word:
+                letters_word.remove(guess)
+                print("" "Well done!") 
+
             else:
-                print(f"Well done, {guess} is in the word!")
-            
-        else: 
-            print(f"{guess} is not a valid guess, please choose a letter")
+                turns -= 1
+                print(f"{guess} is not in the secret word, try again")
+        
+        elif guess in guessed_letters:
+            print(f"You already tried {guess}, try again")
+        
+
+        else:
+            print(f"{guess} is not a valid guess, please choose one letter")
+
+    
+        for letter in word:
+            if letter in guessed_letters:
+                print(f"{letter}", end="")
+            else: 
+                print("_", end="")
+
+    if turns == 0:
+        print("Sorry you lost, the secret word was", word)
+    else:
+        print(" Congratulations! The secret word was", word)
 
    
         
