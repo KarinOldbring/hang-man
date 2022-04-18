@@ -73,7 +73,7 @@ def play_game():
         print(" Congratulations! The secret word was", word)
 
 def stages_for_hanging(turns):
-    stages = [  # final state: head, torso, both arms, and both legs
+    stages = [  # final stage: head, torso, both arms, and both legs
                 """
                    --------
                    |      |
