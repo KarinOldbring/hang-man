@@ -29,10 +29,9 @@ def play_game():
     letters_word = set(word)
     secret_word = "_" * len(word)
     guessed_letters = set()
-    guessed_words = set(word)
+    #guessed_words = set(word)
     turns = 6
     print("Let's start!")
-    #print(stages_for_hanging(turns))
     print("Turns left: ", turns)
     print(secret_word)
 
@@ -72,12 +71,16 @@ def play_game():
 
 
     if turns == 0:
+        print(stages_for_hanging(turns))
         print(" Sorry you lost, the secret word was", word)
 
     else:
         print(" Congratulations! The secret word was", word)
 
 def stages_for_hanging(turns):
+    """
+    Displays the different stages for number of turns
+    """
     stages = [  # Final stage: head, torso, both arms, and both legs
                 """
                    --------
@@ -95,7 +98,7 @@ def stages_for_hanging(turns):
                    |      O
                    |     \\|/
                    |      |
-                   |     / 
+                   |     /
                    -
                 """,
                 # Head, torso, and both arms
@@ -105,7 +108,7 @@ def stages_for_hanging(turns):
                    |      O
                    |     \\|/
                    |      |
-                   |      
+                   |
                    -
                 """,
                 # Head, torso, and one arm
@@ -115,7 +118,7 @@ def stages_for_hanging(turns):
                    |      O
                    |     \\|
                    |      |
-                   |     
+                   |
                    -
                 """,
                 # Head and torso
@@ -125,7 +128,7 @@ def stages_for_hanging(turns):
                    |      O
                    |      |
                    |      |
-                   |     
+                   |
                    -
                 """,
                 # Head
@@ -133,19 +136,19 @@ def stages_for_hanging(turns):
                    --------
                    |      |
                    |      O
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
                    -
                 """,
                 # Initial empty state
                 """
                    --------
                    |      |
-                   |      
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
+                   |
                    -
                 """
     ]
