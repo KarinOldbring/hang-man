@@ -8,14 +8,14 @@ print("Hi! Let's play Hangman!")
 
 def get_valid_word(words):
     word = random.choice(words)
-    while "-" in word or " " in word: 
+    while "-" in word or " " in word:
         word = random.choice(words)
     
     return word.upper()
 
 # Input username
 name = input("What's your name?\n")
-print(f"Good luck {name}!")
+print("Good luck", name, "!")
 
 turns = 6
 
@@ -36,33 +36,32 @@ def play_game():
     while len(letters_word) and turns > 0:
 
         letter_list = [letter if letter in guessed_letters else "_" for letter in word]
-        #print("Guessed letters: ", " ".join(guessed_letters))
-        guess = input(" Pick a letter: \n").upper()
+        print(" Guessed letters: ", " ".join(guessed_letters))
+        print("Turns left: ", turns)
+        guess = input("Pick a letter: \n").upper()
 
         #valid choice
         if guess in alpha - guessed_letters:
             guessed_letters.add(guess)
             if guess in letters_word:
                 letters_word.remove(guess)
-                print("" "Well done!") 
+                print("" "Well done!")
 
             else:
                 turns -= 1
-                print(f"{guess} is not in the secret word, try again")
+                print(guess, "is not in the secret word, try again")
         
         elif guess in guessed_letters:
-            print(f"You already tried {guess}, try again")
+            print("You already tried", guess, ", try again")
         
-
         else:
-            print(f"{guess} is not a valid guess, please choose one letter")
-
+            print(guess, "is not a valid guess, please choose one letter")
     
         for letter in word:
             if letter in guessed_letters:
-                print(f"{letter}", end="")
+                print(letter, end="")
             else: 
-                print("_", end="")
+                print(" _ ", end="")
 
     if turns == 0:
         print("Sorry you lost, the secret word was", word)
