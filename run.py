@@ -23,19 +23,18 @@ def play_game():
     word = get_valid_word(words)
     letters_word = set(word)
     secret_word = "_" * len(word)
-    guessed = False
+    #guessed = False
     guessed_letters = set()
     guessed_words = set(word)
     turns = 6
     print("Let's start!")
+    print(stages_for_hanging(turns))
     print("Turns left: ", turns)
     print(secret_word)
-    #print("Secret word: " + " ".join(secret_word) +"\n")
 
     # While loop for the game to run
     while len(letters_word) and turns > 0:
 
-        letter_list = [letter if letter in guessed_letters else "_" for letter in word]
         print(" Guessed letters: ", " ".join(guessed_letters))
         print("Turns left: ", turns)
         guess = input("Pick a letter: \n").upper()
@@ -49,7 +48,7 @@ def play_game():
 
             else:
                 turns -= 1
-                print(guess, "is not in the secret word, try again")
+                print(guess, "is not in the secret word")
         
         # If user picks the same letter
         elif guess in guessed_letters:
@@ -59,19 +58,93 @@ def play_game():
         else:
             print(guess, "is not a valid guess, please choose one letter")
     
-        # Show letter in secret word
+        # Show letters in secret word
         for letter in word:
             if letter in guessed_letters:
                 print(letter, end="")
-            else: 
+            else:
                 print(" _ ", end="")
 
     # If player runs out of turns
     if turns == 0:
-        print("Sorry you lost, the secret word was", word)
+        print(" Sorry you lost, the secret word was", word)
     # If player guesses the right word
     else:
         print(" Congratulations! The secret word was", word)
+
+def stages_for_hanging(turns):
+    stages = [  # final state: head, torso, both arms, and both legs
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / \\
+                   -
+                """,
+                # head, torso, both arms, and one leg
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |     / 
+                   -
+                """,
+                # head, torso, and both arms
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|/
+                   |      |
+                   |      
+                   -
+                """,
+                # head, torso, and one arm
+                """
+                   --------
+                   |      |
+                   |      O
+                   |     \\|
+                   |      |
+                   |     
+                   -
+                """,
+                # head and torso
+                """
+                   --------
+                   |      |
+                   |      O
+                   |      |
+                   |      |
+                   |     
+                   -
+                """,
+                # head
+                """
+                   --------
+                   |      |
+                   |      O
+                   |    
+                   |      
+                   |     
+                   -
+                """,
+                # initial empty state
+                """
+                   --------
+                   |      |
+                   |      
+                   |    
+                   |      
+                   |     
+                   -
+                """
+    ]
+    return stages[turns]
 
    
         
