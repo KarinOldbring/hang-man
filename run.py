@@ -1,24 +1,28 @@
 import random
-from words import words
 import string
+from words import words
 
 print("Hi! Let's play Hangman!")
 
-# Generate valid random word
-
 def get_valid_word(words):
+    """
+    Generate valid random words
+    """
     word = random.choice(words)
     while "-" in word or " " in word:
         word = random.choice(words)
-  
+
     return word.upper()
 
-# Input username
+
 name = input("What's your name?\n")
 print("Good luck", name, "!")
 
-# Play game
+
 def play_game():
+    """
+    
+    """
     alpha = set(string.ascii_uppercase)
     word = get_valid_word(words)
     letters_word = set(word)
@@ -50,25 +54,25 @@ def play_game():
                 turns -= 1
                 print(guess, "is not in the secret word")
 
-        # If user picks the same letter
+        
         elif guess in guessed_letters:
             print("You already tried", guess, ", try again")
 
-        # Unvalid enter
+        
         else:
             print(guess, "is not a valid guess, please choose one letter")
 
-        # Show letters in secret word
+        
         for letter in word:
             if letter in guessed_letters:
                 print(letter, end="")
             else:
                 print(" _ ", end="")
 
-    # If player runs out of turns
+    
     if turns == 0:
         print(" Sorry you lost, the secret word was", word)
-    # If player guesses the right word
+    
     else:
         print(" Congratulations! The secret word was", word)
 
