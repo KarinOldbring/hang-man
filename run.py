@@ -4,6 +4,7 @@ from words import words
 
 print("Hi! Let's play Hangman!")
 
+
 def get_valid_word(words):
     """
     Generate valid random words
@@ -29,13 +30,11 @@ def play_game():
     letters_word = set(word)
     secret_word = "_" * len(word)
     guessed_letters = set()
-    #guessed_words = set(word)
     turns = 6
     print("Let's start!")
     print("Turns left: ", turns)
     print(secret_word)
 
-    
     while len(letters_word) and turns > 0:
 
         print(" Guessed letters: ", " ".join(guessed_letters))
@@ -43,7 +42,6 @@ def play_game():
         print(stages_for_hanging(turns))
         guess = input("Pick a letter: \n").upper()
 
-        
         if guess in alpha - guessed_letters:
             guessed_letters.add(guess)
             if guess in letters_word:
@@ -54,14 +52,11 @@ def play_game():
                 turns -= 1
                 print(guess, "is not in the secret word")
 
-
         elif guess in guessed_letters:
             print("You already tried", guess, ", try again")
 
-
         else:
             print(guess, "is not a valid guess, please choose one letter")
-
 
         for letter in word:
             if letter in guessed_letters:
@@ -69,13 +64,13 @@ def play_game():
             else:
                 print(" _ ", end="")
 
-
     if turns == 0:
         print(stages_for_hanging(turns))
         print(" Sorry you lost, the secret word was", word)
 
     else:
         print(" Congratulations! The secret word was", word)
+
 
 def stages_for_hanging(turns):
     """
