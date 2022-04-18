@@ -21,7 +21,7 @@ print("Good luck", name, "!")
 
 def play_game():
     """
-    
+
     """
     alpha = set(string.ascii_uppercase)
     word = get_valid_word(words)
@@ -54,25 +54,25 @@ def play_game():
                 turns -= 1
                 print(guess, "is not in the secret word")
 
-        
+
         elif guess in guessed_letters:
             print("You already tried", guess, ", try again")
 
-        
+
         else:
             print(guess, "is not a valid guess, please choose one letter")
 
-        
+
         for letter in word:
             if letter in guessed_letters:
                 print(letter, end="")
             else:
                 print(" _ ", end="")
 
-    
+
     if turns == 0:
         print(" Sorry you lost, the secret word was", word)
-    
+
     else:
         print(" Congratulations! The secret word was", word)
 
