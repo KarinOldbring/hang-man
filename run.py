@@ -2,7 +2,18 @@ import random
 import string
 from words import words
 
-print("Hi! Let's play Hangman!")
+
+print(
+    """                     
+    | |  | |
+    | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __  
+    |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+    | |  | | (_| | | | | (_| | | | | | | (_| | | | |
+    |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                         __/ |
+                        |___/
+    """
+     )
 
 
 def get_valid_word(words):
