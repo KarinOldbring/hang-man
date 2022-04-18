@@ -21,7 +21,8 @@ print("Good luck", name, "!")
 
 def play_game():
     """
-
+    Runs the game, a random word is chosen and the
+     player guesses which letters are in the word
     """
     alpha = set(string.ascii_uppercase)
     word = get_valid_word(words)
@@ -35,7 +36,7 @@ def play_game():
     print("Turns left: ", turns)
     print(secret_word)
 
-    # While loop for the game to run
+    
     while len(letters_word) and turns > 0:
 
         print(" Guessed letters: ", " ".join(guessed_letters))
@@ -43,7 +44,7 @@ def play_game():
         print(stages_for_hanging(turns))
         guess = input("Pick a letter: \n").upper()
 
-        # Valid choice
+        
         if guess in alpha - guessed_letters:
             guessed_letters.add(guess)
             if guess in letters_word:
