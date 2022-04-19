@@ -31,6 +31,28 @@ name = input("What's your name?\n")
 print("Good luck", name, "!")
 
 
+def run_game():
+    """
+    Runs the game and enables the player to play again after finished round
+    """
+    while True:
+        print("Do you want to play?")
+        run_game = input("Press 'Y' for yes and 'N' for no\n").upper()
+        if run_game == "Y":
+            play_game()
+        elif run_game == "N":
+            end_game()
+        else:
+            print("Invalid input, please choose Y or N")
+
+
+def end_game():
+    """
+    Ends game
+    """
+    print("Thanks for playing, see you next time!")
+    exit()
+
 def play_game():
     """
     Runs the game, a random word is chosen and the
@@ -160,4 +182,5 @@ def stages_for_hanging(turns):
     ]
     return stages[turns]
 
+run_game()
 play_game()
