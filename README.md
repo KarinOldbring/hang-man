@@ -1,31 +1,23 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Hangman Game!**
 
-Welcome Karin Oldbring,
+![Am I Responsive](/screenshots/am-i-responsive.png)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## **Aim of the site**
 
-## Reminders
+The site is for users who want to play a fun game of Hangman. There are a great number of random words, 2466 to be precise, so the game can be quite tricky even without any difficulty levels present. The player has 6 guesses before the game is over and the number of turns left will be displayed using the classic hangman images (a man being hung). 
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+[The deployed site can be seen here](https://hang-or-not.herokuapp.com/)
 
-## Creating the Heroku app
+## **Game Features**
+### **Title Screen**
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+![Welcome screen](/screenshots/welcome.png)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+The welcome screen welcomes the player to the site and provides the player with the rules of the game. The welcome screen also asks the player to enter their name. 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### **Enter username to start the game**
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+![Username and start](/screenshots/playername.png)
+![Invalid option](/screenshots/invalid-option.png)
 
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+Once the player has entered their name, they are asked if they want to play. If they choose yes (Y) the game starts, if they choose no (N) then they are being thanked for their participation and the game ends. If anything else is entered they get an invalid option message. 

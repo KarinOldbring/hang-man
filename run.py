@@ -62,7 +62,7 @@ def play_game():
     alpha = set(string.ascii_uppercase)
     word = get_valid_word(words)
     letters_word = set(word)
-    secret_word = "_" * len(word)
+    secret_word = " _ " * len(word)
     guessed_letters = set()
     turns = 6
     print("Let's start!")
