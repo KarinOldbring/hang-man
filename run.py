@@ -4,16 +4,13 @@ from words import words
 
 
 print(
-    """                     
-    | |  | |
-    | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __  
-    |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
-    | |  | | (_| | | | | (_| | | | | | | (_| | | | |
-    |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                         __/ |
-                        |___/
     """
-     )
+    Welcome to this Hangman game!
+    The rules are simple, you are give a random word,
+    then you have 6 turns to guess which word 
+    is lurking in the dark!
+    """
+    )
 
 
 def get_valid_word(words):
