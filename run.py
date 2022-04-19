@@ -1,3 +1,6 @@
+"""
+Hangman game
+"""
 import random
 import string
 from words import words
@@ -7,7 +10,7 @@ print(
     """
     Welcome to this Hangman game!
     The rules are simple, you are give a random word,
-    then you have 6 turns to guess which word 
+    then you have 6 turns to guess which word
     is lurking in the dark!
     """
     )
@@ -49,6 +52,7 @@ def end_game():
     """
     print("Thanks for playing, see you next time!")
     exit()
+
 
 def play_game():
     """
