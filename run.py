@@ -26,8 +26,20 @@ def get_valid_word(words):
     return word.upper()
 
 
-name = input("What's your name?\n")
-print("Good luck", name, "!")
+def enter_name():
+    """
+    Asks user to enter name
+    """
+    while True:
+        print("What's your name?\n")
+        name = input()
+        run_game()
+        if name == string.empty:
+            name = False
+            print("Please enter name to continue")
+
+    #name = input("What's your name?\n")
+    #print("Good luck", name, "!")
 
 
 def run_game():
@@ -40,8 +52,10 @@ def run_game():
 
         if run_game == "Y":
             play_game()
+            break
         elif run_game == "N":
             end_game()
+            break
         else:
             print("Invalid input, please choose Y or N")
 
@@ -177,5 +191,6 @@ def stages_for_hanging(turns):
     ]
     return stages[turns]
 
+enter_name()
 run_game()
 play_game()
