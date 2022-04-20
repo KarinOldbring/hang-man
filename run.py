@@ -23,7 +23,6 @@ def get_valid_word(words):
     word = random.choice(words)
     while "-" in word or " " in word:
         word = random.choice(words)
-
     return word.upper()
 
 
@@ -38,6 +37,7 @@ def run_game():
     while True:
         print("Do you want to play?")
         run_game = input("Press 'Y' for yes and 'N' for no\n").upper()
+
         if run_game == "Y":
             play_game()
         elif run_game == "N":
@@ -67,10 +67,8 @@ def play_game():
     turns = 6
     print("Let's start!")
     print("Turns left: ", turns)
-    print(secret_word)
-
+    print(secret_word)    
     while len(letters_word) and turns > 0:
-
         print(" Guessed letters: ", " ".join(guessed_letters))
         print("Turns left: ", turns)
         print(stages_for_hanging(turns))
@@ -81,14 +79,11 @@ def play_game():
             if guess in letters_word:
                 letters_word.remove(guess)
                 print("" "Well done!")
-
             else:
                 turns -= 1
                 print(guess, "is not in the secret word")
-
         elif guess in guessed_letters:
             print("You already tried", guess, ", try again")
-
         else:
             print(guess, "is not a valid guess, please choose one letter")
 
@@ -101,7 +96,6 @@ def play_game():
     if turns == 0:
         print(stages_for_hanging(turns))
         print(" Sorry you lost, the secret word was", word)
-
     else:
         print(" Congratulations! The secret word was", word)
 
