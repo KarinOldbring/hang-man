@@ -48,11 +48,11 @@ If the letter chosen by the player is incorrect the number of turns will decreas
 
 If the player makes an invalid choice, i.e a digit, multiple letters, a previously guessed letter or any other sign that is not a letter, an error will occur telling the player to make another guess. The number of turns left will not be decreased but the player is encouraged to keep guessing. 
 
-**Player looses**
+**Player loses**
 
-![Player looses](/screenshots/gameover.png)
+![Player loses](/screenshots/gameover.png)
 
-If 6 incorrect guesses are made the player will loose, hang. The secret word is revealed and so is a visual of the poor player being hung. The player is asked if they wish to play again. If so, they do not need to enter name again but the game just runs from the start. 
+If 6 incorrect guesses are made the player will lose, hang. The secret word is revealed and so is a visual of the poor player being hung. The player is asked if they wish to play again. If so, they do not need to enter name again but the game just runs from the start. 
 
 **Player wins**
 
