@@ -40,9 +40,6 @@ def name():
         else:
             print("Not a valid name, please try again")
 
-    #name = input("What's your name?\n")
-    #print("Good luck", name, "!")
-
 
 def run_game():
     """
@@ -82,11 +79,11 @@ def play_game():
     guessed_letters = set()
     turns = 6
     print("Let's start!")
-    print("Turns left: ", turns)
+    print(f"Turns left: {turns}")
     print(secret_word)    
     while len(letters_word) and turns > 0:
         print(" Guessed letters: ", " ".join(guessed_letters))
-        print("Turns left: ", turns)
+        print(f"Turns left: {turns}")
         print(stages_for_hanging(turns))
         guess = input("Pick a letter: \n").upper()
 
@@ -97,11 +94,11 @@ def play_game():
                 print("" "Well done!")
             else:
                 turns -= 1
-                print(guess, "is not in the secret word")
+                print(f"{guess} is not in the secret word")
         elif guess in guessed_letters:
-            print("You already tried", guess, ", try again")
+            print(f"You already tried {guess} try again")
         else:
-            print(guess, "is not a valid guess, please choose one letter")
+            print(f"{guess} is not a valid guess, please choose one letter")
 
         for letter in word:
             if letter in guessed_letters:
@@ -111,9 +108,9 @@ def play_game():
 
     if turns == 0:
         print(stages_for_hanging(turns))
-        print(" Sorry you lost, the secret word was", word)
+        print(f" Sorry you lost, the secret word was {word}")
     else:
-        print(" Congratulations! The secret word was", word)
+        print(f" Congratulations! The secret word was {word}")
 
 
 def stages_for_hanging(turns):
