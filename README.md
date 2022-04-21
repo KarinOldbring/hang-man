@@ -75,10 +75,8 @@ This project was created using [Python](https://www.python.org/). Any other tech
 
 The game has been deployed using Heroku and runs in a command line Python Terminal. I've tested the site using Chrome, Edge and Firefox browser to make sure it runs as expected. I tried to cause the code to crash at various points using incorrect inputs, or no inputs, to try and make the code break it's loop. As there are numerous inputs for the player, I tested these during development. Below is the documentation of my testing: 
 
-### **User Inputs**
 
-
-#### **Enter Username**
+### **Enter Username**
 
 * Expected Outcomes: When entering the game the player is asked to enter their name. A valid name contains only letters and is required for the player to continue. 
 
@@ -96,7 +94,7 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 * Verdict 2: This function now works, and the code loops through the game correctly. 
 
-#### **Play or not**
+### **Play or not**
 
 * Expected Outcomes: The player is asked if they want to play, player is supposed to answer by entering either Y, for yes, or No, for no. Any other inputs are expected to return an error message and request the player to choose 
 
@@ -106,7 +104,7 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 * Verdict: Code functioned as intented and did not break at any stage. 
 
-#### **The Secret Word**
+### **The Secret Word**
 
 * Expected Outcomes: To run the game, the computer is supposed to select a random word from the words.py file. 
 
@@ -156,29 +154,34 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 ### **Player Loses**
 
-* Expected Outcomes: If the player 
+* Expected Outcomes: If the player makes 6 valid guesses and still not manages to guess the secret word, the player loses. The secret word is displayed and the player is asked if they want to play again. 
 
-* Test:
+* Test: Unsuccessful attempts at guessing the secret word were made. 
 
-* Result:
+* Result: A message telling the player they lost appears, and the secret word is revealed. The player is asked if they wish to play again or not. 
 
-* Verdict:
+* Verdict: The player loses function works as intented. 
 
-### ** Player wins**
+### **Player wins**
 
-* Expected Outcomes:
+* Expected Outcomes: If the player manages to guess the secret word using no more than 6 guesses, the player wins! The secret word is displayed and the player is asked if they want to play again. 
 
-* Test:
+* Test: Successful attempts at guessing the secret word were made. 
 
-* Result:
+* Result: A message telling the player they won apperars, and the secret word is displayed. The player is asked if they wish to play again or not. 
 
-* Verdict:
+* Verdict: The player wins function works as intended. 
 
 ## **Validator**
 
 ![Pep8](/screenshots/pep8.png)
 
 The python code was run through [Pep8 Online Check](http://pep8online.com/) to make sure there are no errors in the code. The known error, w292 no newline at end of file, is the only error showing. 
+
+## **Bugs**
+
+* When the player loses, the finas stage of hanging was not displayed but the sevret word was revealed and the player asked if they want to play again. 
+- Solution: Add print(stages_for_hanging(turns)) to the if-statement in the play_game function. 
 
 ## **Deployment**
 
