@@ -65,6 +65,7 @@ If the player manages to guess the correct word the player wins and hence does n
 * Since the game continues such a vast majority of words the game can be quite complicated as of today. When developing the game features to set difficulty level could be implemented. One way this could be done is to limit the number of words that the computer picks it's random word from. The words could be divided into categories for example. Another way would be to set the length of the word to be guessed so that you could choose from shorter or longer words. 
 * If you would like the game to be even more tricky, a timer could be used. The player then would have limited time, for example 20 seconds, to make their guess.  
 * Since one round of playing is done pretty fast it would be a nice feature to be able to keep track of your previous games, a score count. This would work both when playing a number of rounds at once, to keep track if you or the computer are winning, but also when you visit the site again to check your track record from before. 
+* Give the player the option to choose if they would like to have more turns each game, they could have the option of 9 turns instead of 6. 
 
 ## **Technologies Used**
 
@@ -72,7 +73,30 @@ This project was created using [Python](https://www.python.org/). Any other tech
 
 ## **Testing**
 
-The game has been deployed using Heroku and runs in a command line Python Terminal. I've tested the site using Chrome, Edge and Firefox browser. To make sure the game runs as expected I tried entering invalid inputs as mentioned in the features section. To my knowledge the game runs as it is supposed to and no known bugs are found. 
+The game has been deployed using Heroku and runs in a command line Python Terminal. I've tested the site using Chrome, Edge and Firefox browser to make sure it runs as expected. I tried to cause the code to crash at various points using incorrect inputs, or no inputs, to try and make the code break it's loop. As there are numerous inputs for the player, I tested these during development. Below is the documentation of my testing: 
+
+### **User Inputs**
+
+
+#### **Play or not**
+
+**Expected Outcomes:** The player is asked when entering the game if they want to play, player is supposed to answer by entering either Y, for yes, or No, for no. Any other inputs are expected to return an error message and request the player to choose 
+
+**Test:**
+
+**Result:**
+
+**Verdict:**
+
+#### **Enter Username:**
+
+**Expected Outcomes:** 
+
+**Test:** 
+
+**Result:**
+
+**Verdict:**
 
 ## **Validator**
 
