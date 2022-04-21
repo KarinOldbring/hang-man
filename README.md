@@ -100,55 +100,63 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 * Expected Outcomes: The player is asked if they want to play, player is supposed to answer by entering either Y, for yes, or No, for no. Any other inputs are expected to return an error message and request the player to choose 
 
-*Test:
+* Test: I tried correct inputs (Y and N) as well as incorrect inputs, digits, blanks, other signsand letters. 
 
-*Result:
+* Result: Correct inputs progressed the code correctly and incorrect inputs displayed a messeage prompting the player for the right input. 
 
-* Verdict:
+* Verdict: Code functioned as intented and did not break at any stage. 
 
 #### **The Secret Word**
 
-* Expected Outcomes:
+* Expected Outcomes: To run the game, the computer is supposed to select a random word from the words.py file. 
 
-* Test:
+* Test: To ensure function was working as intended I made sure that different words were displayed each time a new game started. 
 
-* Result:
+* Result: Since some words contains blanks or hyphens, I created a while loop to get the computer to choose another word if that was the case. New words got selected as intended but it was difficult to see how many letters the secret word contained since the underscores representing each letter was all in one line. 
 
-* Verdict:
+* Verdict: The random word function worked as intented but the display of the secret word needed improvement. 
+
+* Solution: To make it clear how many letters the secret word contains I added blanks between each underscore: " _ ". 
+
+* Test 2: Ran game again to get computer to choose random word. 
+
+* Result 2: The blanks make it easy to see how many letters are in the secret word. 
+
+* Verdict 2: The secret word function runs as intented, presenting new random words, without blanks or hyphens, and the number of letters are also clearly displayed. 
 
 ### **Correct Letter**
 
-* Expected Outcomes:
+* Expected Outcomes: Once the game is running, the player is presented with the secret word to guess. From start the player can see how many letters are in the secret word. If the guessed letter is in the secret word, the underscore in the word is supposed to be replaced by the correct letter. Each valid guess is to be displayed in a guessed letters list. 
 
-* Test:*
+* Test: Correct inputs; letters, and incorrect inputs; digits, blanks, other signs, were entered to test this function. 
 
-* Result:
+* Result: Correct guesses reveal the letter in the secret word and is also added in the guessed letters list. 
 
-* Verdict:
+* Verdict: The correct letter guesses works as intended. 
 
 ### **Wrong Letter**
 
-* Expected Outcomes:
+* Expected Outcomes: If the guessed letter is not in the word, the player is encouraged to make another guess, if there are still turns to go. THe guessed letter is supposed to show in the guessed letters list and hanging stage display change, showing the player that they are one step closer to being hung. 
 
-* Test:
+* Test: Correct inputs; letters, and incorrect inputs; digits, blanks, other signs, were entered to test this function. 
 
-* Result:
+* Result: Wrong guesses are added in the guessed letters list, numbers of turns are decreasing and the display for hanging stage changes. 
 
-* Verdict:
+* Verdict: The wrong letter guesses works as intended. 
 
 ### **Invalid Guess**
 
-* Expected Outcomes:
+* Expected Outcomes: If the player inputs an invalid guess, i.e digits, blanks, other signs or a letter that has already been guessed, an error is supposed to be shown, encouraging the player to make another guess. 
 
-* Test:
+* Test: Correct inputs; letters, and incorrect inputs; digits, blanks, other signs, were entered to test this function. 
 
-* Result:
+* Result: If an invalid guess was entered an error is shown and the player is asked to choose one letter. As intented the number of turns reamain the same.  
 
-* Verdict:
+* Verdict: The invalid guess works as intended. 
 
 ### **Player Loses**
 
-* Expected Outcomes:
+* Expected Outcomes: If the player 
 
 * Test:
 
