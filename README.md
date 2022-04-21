@@ -62,9 +62,9 @@ If the player manages to guess the correct word the player wins and hence does n
 
 ## **Possible Future Features**
 
-* Since the game continues such a vast majority of words the game can be quite complicated as of today. When developing the game features to set difficulty level could be implemented. One way this could be done is to limit the number of words that the computer picks it's random word from. The words could be divided into categories for example. Another way would be to set the length of the word to be guessed so that you could choose from shorter or longer words. 
-* If you would like the game to be even more tricky, a timer could be used. The player then would have limited time, for example 20 seconds, to make their guess.  
-* Since one round of playing is done pretty fast it would be a nice feature to be able to keep track of your previous games, a score count. This would work both when playing a number of rounds at once, to keep track if you or the computer are winning, but also when you visit the site again to check your track record from before. 
+* Since the game contains such a vast majority of words the game can be quite complicated as of today. When developing the game features to set difficulty level could be implemented. One way this could be done is to limit the number of words that the computer picks it's random words from. The words could also be divided into categories, animals or countries for example. Another way would be to set the length of the word to be guessed so that you could choose between shorter and longer words. 
+* If you would like the game to be even more tricky, a timer could be used. The player would then have limited time, for example 20 seconds, to make their guess.  
+* Since one round of playing is done pretty fast it would be a nice feature to be able to keep track of your previous games, a score count. This would work both when playing a number of rounds at once, to keep track if you or the computer are winning, but also when you visit the site again to check your previous track record. 
 * Give the player the option to choose if they would like to have more turns each game, they could have the option of 9 turns instead of 6. 
 
 ## **Technologies Used**
