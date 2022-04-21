@@ -9,7 +9,7 @@ from words import words
 print(
     """
     Welcome to this Hangman game!
-    The rules are simple, you are give a random word,
+    The rules are simple, you are given a random word,
     then you have 6 turns to guess which word
     is lurking in the dark!
     """
