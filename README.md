@@ -180,10 +180,13 @@ The python code was run through [Pep8 Online Check](http://pep8online.com/) to m
 
 ## **Bugs**
 
+Within reason I have tested the game by trying to break the code and tested for errors but to my knowledge the game runs as intented today and there are no known bugs. I did discover some along the way as presented below: 
 * When the player loses, the finas stage of hanging was not displayed but the secret word was revealed and the player asked if they want to play again. 
-- Solution: Add print(stages_for_hanging(turns)) to the if-statement in the play_game function. 
+    - Solution: Add print(stages_for_hanging(turns)) to the if-statement in the play_game function. 
 * As explained in the testing section regarding the secret word, it was difficult for the player to determine how many letters the secret word contained. 
-- Solution: Blanks were added before and after each underscore; " _ ". 
+    - Solution: Blanks were added before and after each underscore; " _ ". 
+* The enter name was not mandatory, making it possible for the player to continue without entering name. 
+    - Solution: Created a **"while True"** statement, ensuring the player enters a name. This too is explained in further detail in the testing section. 
 
 ## **Deployment**
 

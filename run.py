@@ -80,7 +80,7 @@ def play_game():
     turns = 6
     print("Let's start!")
     print(f"Turns left: {turns}")
-    print(secret_word)    
+    print(secret_word)
     while len(letters_word) and turns > 0:
         print(" Guessed letters: ", " ".join(guessed_letters))
         print(f"Turns left: {turns}")
