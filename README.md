@@ -80,91 +80,91 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 #### **Enter Username**
 
-**Expected Outcomes:** When entering the game the player is asked to enter their name. A valid name contains only letters and is required for the player to continue. 
+* Expected Outcomes: When entering the game the player is asked to enter their name. A valid name contains only letters and is required for the player to continue. 
 
-**Test:** I tried entering names using letters, numbers, other signs and not entering anything at all. 
+* Test: I tried entering names using letters, numbers, other signs and not entering anything at all. 
 
-**Result:** If entering a name and pressing enter the game would run and the name would display as intented. However if anything else was entered, number, signs or even left blank, the player could continue without a name by pressing enter. 
+* Result: If entering a name and pressing enter the game would run and the name would display as intented. However if anything else was entered, number, signs or even left blank, the player could continue without a name by pressing enter. 
 
-**Verdict:** This test failed at this stage since the player was not forced to enter a valid name. 
+* Verdict: This test failed at this stage since the player was not forced to enter a valid name. 
 
-**Solution:** To resolve this issue, I added a **"while True"** statement, ensuring that game will not run without valid username. 
+* Solution: To resolve this issue, I added a **"while True"** statement, ensuring that game will not run without valid username. 
 
-**Test 2:** I tested incorrect inputs (digits, blanks, other signs) and correct inputs, to make sure the player can't get passed the name requirement. If input is invalid, the player should be encouraged to try again. 
+* Test 2: I tested incorrect inputs (digits, blanks, other signs) and correct inputs, to make sure the player can't get passed the name requirement. If input is invalid, the player should be encouraged to try again. 
 
-**Result 2:** With the **"while True"** statement, any invalid input printed the appropriate error message and requested correct input. 
+* Result 2: With the **"while True"** statement, any invalid input printed the appropriate error message and requested correct input. 
 
-**Verdict 2:** This function now works, and the code loops through the game correctly. 
+* Verdict 2: This function now works, and the code loops through the game correctly. 
 
 #### **Play or not**
 
-**Expected Outcomes:** The player is asked if they want to play, player is supposed to answer by entering either Y, for yes, or No, for no. Any other inputs are expected to return an error message and request the player to choose 
+* Expected Outcomes: The player is asked if they want to play, player is supposed to answer by entering either Y, for yes, or No, for no. Any other inputs are expected to return an error message and request the player to choose 
 
-**Test:**
+*Test:
 
-**Result:**
+*Result:
 
-**Verdict:**
+* Verdict:
 
 #### **The Secret Word**
 
-**Expected Outcomes:** 
+* Expected Outcomes:
 
-**Test:** 
+* Test:
 
-**Result:**
+* Result:
 
-**Verdict:**
+* Verdict:
 
 ### **Correct Letter**
 
-**Expected Outcomes:** 
+* Expected Outcomes:
 
-**Test:** 
+* Test:*
 
-**Result:**
+* Result:
 
-**Verdict:**
+* Verdict:
 
 ### **Wrong Letter**
 
-**Expected Outcomes:** 
+* Expected Outcomes:
 
-**Test:** 
+* Test:
 
-**Result:**
+* Result:
 
-**Verdict:**
+* Verdict:
 
 ### **Invalid Guess**
 
-**Expected Outcomes:** 
+* Expected Outcomes:
 
-**Test:** 
+* Test:
 
-**Result:**
+* Result:
 
-**Verdict:**
+* Verdict:
 
 ### **Player Loses**
 
-**Expected Outcomes:** 
+* Expected Outcomes:
 
-**Test:** 
+* Test:
 
-**Result:**
+* Result:
 
-**Verdict:**
+* Verdict:
 
 ### ** Player wins**
 
-**Expected Outcomes:** 
+* Expected Outcomes:
 
-**Test:** 
+* Test:
 
-**Result:**
+* Result:
 
-**Verdict:**
+* Verdict:
 
 ## **Validator**
 
