@@ -96,11 +96,11 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 ### **Play or not**
 
-* Expected Outcomes: The player is asked if they want to play, player is supposed to answer by entering either Y, for yes, or No, for no. Any other inputs are expected to return an error message and request the player to choose 
+* Expected Outcomes: The player is asked if they want to play, player is supposed to answer by entering either Y, for yes, or N, for no. Any other inputs are expected to return an error message and request the player to choose 
 
-* Test: I tried correct inputs (Y and N) as well as incorrect inputs, digits, blanks, other signsand letters. 
+* Test: I tried the correct inputs (Y and N) as well as incorrect inputs, digits, blanks, other signs and letters. 
 
-* Result: Correct inputs progressed the code correctly and incorrect inputs displayed a messeage prompting the player for the right input. 
+* Result: Correct inputs progressed the code correctly and incorrect inputs displayed a message prompting the player for the right input. 
 
 * Verdict: Code functioned as intented and did not break at any stage. 
 
@@ -130,17 +130,17 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 * Result: Correct guesses reveal the letter in the secret word and is also added in the guessed letters list. 
 
-* Verdict: The correct letter guesses works as intended. 
+* Verdict: The correct letter guesses work as intended. 
 
 ### **Wrong Letter**
 
-* Expected Outcomes: If the guessed letter is not in the word, the player is encouraged to make another guess, if there are still turns to go. THe guessed letter is supposed to show in the guessed letters list and hanging stage display change, showing the player that they are one step closer to being hung. 
+* Expected Outcomes: If the guessed letter is not in the word, the player is encouraged to make another guess, if there are still turns to go. The guessed letter is supposed to show in the guessed letters list and hanging stage display change, showing the player that they are one step closer to being hung. 
 
 * Test: Correct inputs; letters, and incorrect inputs; digits, blanks, other signs, were entered to test this function. 
 
 * Result: Wrong guesses are added in the guessed letters list, numbers of turns are decreasing and the display for hanging stage changes. 
 
-* Verdict: The wrong letter guesses works as intended. 
+* Verdict: The wrong letter guesses work as intended. 
 
 ### **Invalid Guess**
 
@@ -154,11 +154,11 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 ### **Player Loses**
 
-* Expected Outcomes: If the player makes 6 valid guesses and still not manages to guess the secret word, the player loses. The secret word is displayed and the player is asked if they want to play again. 
+* Expected Outcomes: If the player makes 6 valid guesses and still not manages to guess the secret word, the player loses. The visual of the player being hung is displayed. The secret word is revealed and the player is asked if they want to play again. 
 
 * Test: Unsuccessful attempts at guessing the secret word were made. 
 
-* Result: A message telling the player they lost appears, and the secret word is revealed. The player is asked if they wish to play again or not. 
+* Result: A message telling the player they lost appears, the hanging man is displayed and the secret word is revealed. The player is asked if they wish to play again or not. 
 
 * Verdict: The player loses function works as intented. 
 
