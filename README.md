@@ -158,9 +158,17 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 * Test: Unsuccessful attempts at guessing the secret word were made. 
 
-* Result: A message telling the player they lost appears, the hanging man is displayed and the secret word is revealed. The player is asked if they wish to play again or not. 
+* Result: A message telling the player they lost appears, the hanging man is displayed and the secret word is revealed. The player is not asked if they wish to play again or not. 
 
-* Verdict: The player loses function works as intented. 
+* Verdict: The player loses function doesn't work as intented since the player is not asked if they want to play again.  
+
+* Solution: Add the run_game function to the if turns == 0 statement in the play_game function. 
+
+* Test 2: Unsuccessful attempts at guessing the secret word were made. 
+
+* Result 2: When the player loses a message appears telling the player they lost. The hanging man is displayed and the secret word is revealed. The player is asked if they wish to play again or not. 
+
+* Verdict 2: The player loses function works as intented. 
 
 ### **Player wins**
 
@@ -168,9 +176,18 @@ The game has been deployed using Heroku and runs in a command line Python Termin
 
 * Test: Successful attempts at guessing the secret word were made. 
 
-* Result: A message telling the player they won apperars, and the secret word is displayed. The player is asked if they wish to play again or not. 
+* Result: A message telling the player they won apperars, and the secret word is displayed. The player is not asked if they wish to play again or not. 
 
-* Verdict: The player wins function works as intended. 
+* Verdict: The player loses function doesn't work as intented since the player is not asked if they want to play again.
+
+* Solution: Add the run_game function to the else statement in the play_game function. 
+
+* Test 2: Successful attempts at guessing the secret word were made. 
+
+* Result 2: When the player wins a message appears telling the player they won and the secret word is revealed. The player is asked if they wish to play again or not. 
+
+
+* Verdict 2: The player wins function works as intented. 
 
 ## **Validator**
 
